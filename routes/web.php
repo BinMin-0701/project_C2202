@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminNewsController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
+
+
+Route::get('/', [AdminNewsController::class, 'index']);

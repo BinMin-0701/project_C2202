@@ -105,38 +105,40 @@ a:focus {
 
 /*header section*/
 .hero_area {
-  position: relative;
-  min-height: 100vh;
+  // position: relative;
+  // min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding-left: 45px;
+  // padding-left: 45px;
 
-  .hero_social {
-    position: absolute;
-    top: 45%;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 45px;
-    transform: translateY(-50%);
-
-    a {
-      color: #999;
-      margin: 5px 0;
-
-      &:hover {
-        transform: translateY(-4px);
-        transition: all 4ms;
-      }
-    }
-
-  }
+  
 
   .container-fluid {
     padding-left: 25px;
     padding-right: 25px;
   }
+}
+
+.hero_social {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45px;
+  transform: translateY(-50%);
+
+  a {
+    color: #999;
+    margin: 5px 0;
+
+    &:hover {
+      transform: translateY(-4px);
+      transition: all 4ms;
+    }
+  }
+
 }
 
 .sub_page {
@@ -314,13 +316,14 @@ a:focus {
 
 /* slider section */
 .slider_section {
-  flex: 1;
-  display: flex;
   align-items: center;
-  padding: 45px 0;
   background-color: $primary1;
   border-radius: 0 0 0 250px;
   background: $primary2;
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  padding: 45px 0;
 
   .row {
     align-items: center;
@@ -329,6 +332,7 @@ a:focus {
   #customCarousel1 {
     width: 100%;
     position: unset;
+    padding-left: 45px;
   }
 
   .detail-box {

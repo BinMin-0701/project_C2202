@@ -80,8 +80,6 @@ a:focus {
 
 /*header section*/
 .hero_area {
-  position: relative;
-  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -89,9 +87,13 @@ a:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-left: 45px;
 }
-.hero_area .hero_social {
+.hero_area .container-fluid {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.hero_social {
   position: absolute;
   top: 45%;
   left: 0;
@@ -109,19 +111,15 @@ a:focus {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-.hero_area .hero_social a {
+.hero_social a {
   color: #999;
   margin: 5px 0;
 }
-.hero_area .hero_social a:hover {
+.hero_social a:hover {
   -webkit-transform: translateY(-4px);
           transform: translateY(-4px);
   -webkit-transition: all 4ms;
   transition: all 4ms;
-}
-.hero_area .container-fluid {
-  padding-left: 25px;
-  padding-right: 25px;
 }
 
 .sub_page .hero_area {
@@ -274,19 +272,20 @@ a:focus {
 /*end header section*/
 /* slider section */
 .slider_section {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 45px 0;
   background-color: #f0d43a;
   border-radius: 0 0 0 250px;
   background: #3b4a6b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-height: 100vh;
+  padding: 45px 0;
 }
 .slider_section .row {
   -webkit-box-align: center;
@@ -296,6 +295,7 @@ a:focus {
 .slider_section #customCarousel1 {
   width: 100%;
   position: unset;
+  padding-left: 45px;
 }
 .slider_section .detail-box {
   color: #ffffff;
