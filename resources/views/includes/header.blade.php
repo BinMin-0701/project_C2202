@@ -21,12 +21,11 @@
             </li>
             <li class="nav-item">
               <div class="dropdown">
-                <a href="" class="btn">Product</a>
+                <a href="../page/product.blade.php" class="btn">Product</a>
                 <ul class="dropdown-menu">
                   @foreach ($category as $cat)
-                  <li><a class="dropdown-item" href=" {{URL::to('/product' . $cat->id)}} "> {{$cat->name}} </a></li>
+                  <li><a class="dropdown-item" href=" {{URL::to('/product_brand' . $cat->id)}} "> {{$cat->name}} </a></li>
                   @endforeach
-
                 </ul>
               </div>
             </li>

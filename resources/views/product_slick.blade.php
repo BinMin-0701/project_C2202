@@ -7,20 +7,20 @@
     <div class="shop_slick row">
       @foreach ($apple as $product)
       <div class="col-sm-6 ">
-        <div class="box">
+        <div class="card">
           <a href="">
             <div class="img-box">
-              <img src="images/w4.png" alt="">
+              <img src="images/apple-watch-6-40mm.png" alt="">
             </div>
-            <div class="detail-box">
-              <h6> {{$product->name}} </h6>
-              @foreach ($apple_size as $size)
-              <h6>Price: <span> {{$size->name}} </span>                
-              @endforeach
-              </h6>
-            </div>
-            <div class="new">
-              <span> New </span>
+            <div class="card-body">
+              <div class="detail-box">
+                <h6> {{$product->name}} </h6>
+                <h6>Price: <span> {{number_format($product->price) }} VNĐ</span>
+                </h6>
+              </div>
+              <div class="new">
+                <span> New </span>
+              </div>
             </div>
           </a>
         </div>
@@ -34,6 +34,7 @@
   </div>
 </section>
 
+<!-- SamSung Watch -->
 <section class="shop_section layout_padding">
   <div class="container">
     <div class="heading_container heading_center">
@@ -43,18 +44,20 @@
     <div class="shop_slick row">
       @foreach ($samsung as $product)
       <div class="col-sm-6 ">
-        <div class="box">
+        <div class="card">
           <a href="">
             <div class="img-box">
-              <img src="images/w4.png" alt="">
+              <img src="images/apple-watch-6-40mm.png" alt="">
             </div>
-            <div class="detail-box">
-              <h6> {{$product->name}} </h6>
-              <h6>Price: <span> </span>
-              </h6>
-            </div>
-            <div class="new">
-              <span> New </span>
+            <div class="card-body">
+              <div class="detail-box">
+                <h6> {{$product->name}} </h6>
+                <h6>Price: <span> {{number_format($product->price) }} VNĐ</span>
+                </h6>
+              </div>
+              <div class="new">
+                <span> New </span>
+              </div>
             </div>
           </a>
         </div>
@@ -67,206 +70,35 @@
   </div>
 </section>
 
+<!-- Xiaomi Watch -->
 <section class="shop_section layout_padding">
   <div class="container">
     <div class="heading_container heading_center">
-      <h2>Xiaomi Watch</h2>
+      <h2> {{$pageName_apple}} </h2>
     </div>
     <div class="shop_slick row">
-      <div class="col-sm-6 col-xl-3">
-        <div class="box">
+      @foreach ($apple as $product)
+      <div class="col-sm-6 ">
+        <div class="card">
           <a href="">
             <div class="img-box">
-              <img src="images/w4.png" alt="">
+              <img src="images/apple-watch-6-40mm.png" alt="">
             </div>
-            <div class="detail-box">
-              <h6>Smartwatch</h6>
-              <h6>Price: <span> $145 </span>
-              </h6>
-            </div>
-            <div class="new">
-              <span>
-                New
-              </span>
+            <div class="card-body">
+              <div class="detail-box">
+                <h6> {{$product->name}} </h6>
+                <h6>Price: <span> {{number_format($product->price) }} VNĐ</span>
+                </h6>
+              </div>
+              <div class="new">
+                <span> New </span>
+              </div>
             </div>
           </a>
         </div>
       </div>
-      <div class="col-sm-6 col-xl-3">
-        <div class="box">
-          <a href="">
-            <div class="img-box">
-              <img src="images/w5.png" alt="">
-            </div>
-            <div class="detail-box">
-              <h6>
-                Smartwatch
-              </h6>
-              <h6>
-                Price:
-                <span>
-                  $195
-                </span>
-              </h6>
-            </div>
-            <div class="new">
-              <span>
-                New
-              </span>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-sm-6 col-xl-3">
-        <div class="box">
-          <a href="">
-            <div class="img-box">
-              <img src="images/w6.png" alt="">
-            </div>
-            <div class="detail-box">
-              <h6>
-                Smartwatch
-              </h6>
-              <h6>
-                Price:
-                <span>
-                  $170
-                </span>
-              </h6>
-            </div>
-            <div class="new">
-              <span>
-                New
-              </span>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-sm-6 col-xl-3">
-        <div class="box">
-          <a href="">
-            <div class="img-box">
-              <img src="images/w1.png" alt="">
-            </div>
-            <div class="detail-box">
-              <h6>
-                Smartwatch
-              </h6>
-              <h6>
-                Price:
-                <span>
-                  $230
-                </span>
-              </h6>
-            </div>
-            <div class="new">
-              <span>
-                New
-              </span>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-sm-6 col-xl-3">
-        <div class="box">
-          <a href="">
-            <div class="img-box">
-              <img src="images/w4.png" alt="">
-            </div>
-            <div class="detail-box">
-              <h6>
-                Smartwatch
-              </h6>
-              <h6>
-                Price:
-                <span>
-                  $145
-                </span>
-              </h6>
-            </div>
-            <div class="new">
-              <span>
-                New
-              </span>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-sm-6 col-xl-3">
-        <div class="box">
-          <a href="">
-            <div class="img-box">
-              <img src="images/w5.png" alt="">
-            </div>
-            <div class="detail-box">
-              <h6>
-                Smartwatch
-              </h6>
-              <h6>
-                Price:
-                <span>
-                  $195
-                </span>
-              </h6>
-            </div>
-            <div class="new">
-              <span>
-                New
-              </span>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-sm-6 col-xl-3">
-        <div class="box">
-          <a href="">
-            <div class="img-box">
-              <img src="images/w6.png" alt="">
-            </div>
-            <div class="detail-box">
-              <h6>
-                Smartwatch
-              </h6>
-              <h6>
-                Price:
-                <span>
-                  $170
-                </span>
-              </h6>
-            </div>
-            <div class="new">
-              <span>
-                New
-              </span>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-sm-6 col-xl-3">
-        <div class="box">
-          <a href="">
-            <div class="img-box">
-              <img src="images/w1.png" alt="">
-            </div>
-            <div class="detail-box">
-              <h6>
-                Smartwatch
-              </h6>
-              <h6>
-                Price:
-                <span>
-                  $230
-                </span>
-              </h6>
-            </div>
-            <div class="new">
-              <span>
-                New
-              </span>
-            </div>
-          </a>
-        </div>
-      </div>
+      @endforeach
+
     </div>
     <div class="btn-box">
       <a href="">View All </a>

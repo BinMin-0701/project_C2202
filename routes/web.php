@@ -23,4 +23,5 @@ use Illuminate\Support\Facades\Auth;
 
 
 Route::get('/', [AdminNewsController::class, 'index']);
-Route::get('index', [HomeController::class, 'index']);
+
+Route::get('/page/product', );
