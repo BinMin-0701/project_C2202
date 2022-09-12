@@ -9,7 +9,7 @@
 <link href="css/font-awesome.min.css" rel="stylesheet" />
 
 <!-- Custom styles for this template -->
-<link href="css/style.css" rel="stylesheet" />
+<link href="{{ url('/css/style.css') }}" rel="stylesheet" />
 <!-- responsive style -->
 <link href="css/responsive.css" rel="stylesheet" />
 <link rel="stylesheet" type="text/css" href="slick/slick.css" />

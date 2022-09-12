@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminNewsController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -24,4 +25,4 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', [AdminNewsController::class, 'index']);
 
-Route::get('/page/product', );
+Route::get('/page/product', [ProductController::class, 'index']);

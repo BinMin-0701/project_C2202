@@ -23,32 +23,25 @@ class AdminNewsController extends Controller
       ->where('category.id', 'apw')
       ->join('size', 'size.id','=','product.id_size')
       ->select('category.name','product.name','size.price');
-      $apple = $apple->get();
-      $pageName_apple = 'Apple Watch';
+    $apple = $apple->get();
+    $pageName_apple = 'Apple Watch';
       
-      
-      $apple_size = DB::table('product')->join('size', 'size.id', '=', 'product.id_size')->where('size.id','product.id_size')->select('*');
-      $apple_size = $apple_size->get();
-      
-      $samsung = DB::table('category')
+    $apple_size = DB::table('product')->join('size', 'size.id', '=', 'product.id_size')->where('size.id','product.id_size')->select('*');
+    $apple_size = $apple_size->get();
+    
+    $samsung = DB::table('category')
       ->join('product', 'category.id', '=', 'product.id_cat')
       ->where('category.id', 'ssw')
       ->join('size', 'size.id', '=', 'product.id_size')
       ->select('category.name', 'product.name', 'size.price');
-      $samsung = $samsung->get();
-      $pageName_samsung = 'SamSung Watch';
+    $samsung = $samsung->get();
+    $pageName_samsung = 'SamSung Watch';
 
-    // return view('index', compact('apple', 'pageName_apple'));     
-    // return view('index', compact('apple_size'));
-    // return view('index', compact('samsung', 'pageName_samsung'));
     return view('index')
-    ->with('category',$category)
+    ->with('category', $category)
     ->with('apple',$apple,$pageName_apple)->with('pageName_apple',$pageName_apple)
     ->with('apple_size', $apple_size)
     ->with('samsung',$samsung,$pageName_samsung)->with('pageName_samsung', $pageName_samsung) ;
-
-    // Hiện thị toàn bộ sản phẩm có trạng thái status = 0
-    // $all_product = DB::table('product')->where('status','=','0')->orderBy('id','desc')->limit(4)->get();
   }
 
   /**
