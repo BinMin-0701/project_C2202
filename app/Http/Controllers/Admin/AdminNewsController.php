@@ -15,26 +15,33 @@ class AdminNewsController extends Controller
    */
   public function index()
   {
+    $category = DB::table('category')->where('status','0')->orderBy('id','desc')->select('*');
+    $category = $category->get();
 
     $apple = DB::table('category')
       ->join('product', 'category.id', '=', 'product.id_cat')
       ->where('category.id', 'apsr6')->select('*');
       $apple = $apple->get();
       $pageName_apple = 'Apple Watch';
-    return view('index', compact('apple', 'pageName_apple'));     
+      
+      
+      $apple_size = DB::table('product')->join('size', 'size.id', '=', 'product.id_size')->where('size.id','=', 'product.id_size')->select('*');
+      $apple_size = $apple_size->get();
+      
+      $samsung = DB::table('category')
+      ->join('product', 'category.id', '=', 'product.id_cat')
+      ->where('category.id', 'ssw5')->select('*');
+      $samsung = $samsung->get();
+      $pageName_samsung = 'SamSung Watch';
 
-    
-    $apple_size = DB::table('product')->join('size', 'size.id', '=', 'product.id_size')->where('size.id', 'product.id_size')->select('*');
-    $apple_size = $apple_size->get();
-    return view('index', compact('apple_size'));
-    
-    $samsung = DB::table('category')
-    ->join('product', 'category.id', '=', 'product.id_cat')
-    ->where('category.id', 'ssw5')->select('*');
-    $samsung = $samsung->get();
-    $pageName_samsung = 'SamSung Watch';
-    return view('index', compact('samsung', 'pageName_samsung'));
-
+    // return view('index', compact('apple', 'pageName_apple'));     
+    // return view('index', compact('apple_size'));
+    // return view('index', compact('samsung', 'pageName_samsung'));
+    return view('index')
+    ->with('category',$category)
+    ->with('apple',$apple,$pageName_apple)->with('pageName_apple',$pageName_apple)
+    ->with('apple_size', $apple_size)
+    ->with('samsung',$samsung,$pageName_samsung)->with('pageName_samsung', $pageName_samsung) ;
   }
 
   /**
